@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>變數</title>
+    <title>ifelse</title>
 </head>
 <body>
-    <a href="index.html">index</a><br>
+    
+    <h2><a href="index.html">index</a></h2><br>
+
     <?php
     
     echo "ABC"
