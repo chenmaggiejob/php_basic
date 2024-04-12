@@ -6,6 +6,7 @@
     <title>變數</title>
 </head>
 <body>
+    <a href="index.html">index</a><br>
     <?php
     
     echo "ABC"
@@ -37,6 +38,9 @@
     $score=100;
     
     $level=($score>=60)?'及格':'不及格';
+
+    
+    
     /* 
         if($score>=60){
         $leverl='及格';
@@ -48,6 +52,8 @@
     echo "成績為：".$score;
     echo "<br>";
     echo "是否及格：".$level;
+
+    echo "<hr>";
 
     ?>
 
