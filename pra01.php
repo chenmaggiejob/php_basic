@@ -6,6 +6,9 @@
     , initial-scale=1.0">
     <title>流程結構練習</title>
 </head>
+
+<h2><a href="index.html">index</a></h2><br>
+
 <body>
     <h2>判斷成績及學生</h2>
     <h3>給一個成績數字，判斷是否及格(60分)</h3>
