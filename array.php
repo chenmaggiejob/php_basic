@@ -223,10 +223,14 @@
     for ( $i=0 ; $i<ceil(count($a)/2);$i++){
 
         $tmp=$a[$i];
-        $a[$i]=$a[count($a)-1-$i]; //陣列是可以寫公式的，但是只能
+        $a[$i]=$a[count($a)-1-$i]; 
+        $a[count($a)-1-$i]=$tmp;
 
     echo "交換後為:[".join(',',$a)."]<br>";
     echo "交換後為:[".join(',',array_reverse($a))."]<br>";//這一段是內建函式在說明221~226
+
+    }
+
 ?>
 
 
