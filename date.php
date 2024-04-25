@@ -100,7 +100,6 @@
 
     for($i=0;$i<5;$i++) {
         $day=strtotime("+$i week",strtotime($date));//秒數
-        date("N");
         echo date("Y-m-d" , $day);
         echo $week[date("N",$day)];
         echo "<br>";
