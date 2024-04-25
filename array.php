@@ -225,15 +225,12 @@
         $tmp=$a[$i];
         $a[$i]=$a[count($a)-1-$i]; 
         $a[count($a)-1-$i]=$tmp;
-
-    echo "交換後為:[".join(',',$a)."]<br>";
-    echo "交換後為:[".join(',',array_reverse($a))."]<br>";//這一段是內建函式在說明221~226
-
     }
 
+    echo "交換後為:[".join(',',$a)."]<br>";
+    echo "交換後為:[".join(',',array_reverse($a))."]<br>";//這一段是內建函式在說明223~228
+
 ?>
-
-
 
 </body>
 </html>
