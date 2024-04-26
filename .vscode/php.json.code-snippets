@@ -15,10 +15,13 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	
 	"PHP Tag": {
 		"prefix": "<?php",
-		"body": ["<?php", "", "?>"],
+		"body": [
+			"<?php",
+			"",
+			"?>"
+		],
 		"description": "PHP opening and closing tags"
-	
+	}
 }
