@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <style>
         table {
             border-collapse: collapse;
-            border:3px double lightgray;
+            border: 3px double lightgray;
         }
 
         td {
-            padding:5px;
-            border:1px solid black;
+            padding: 5px;
+            border: 1px solid black;
         }
     </style>
 </head>
+
 <body>
     <h2><a href="index.html">index</a></h2><br>
 
@@ -28,61 +30,59 @@
 
     <!--  -->
 
-<?php
+    <?php
 
-        $month=5;
-        echo "月份:".$month;
-        echo "<br>";
-        $firstDay=strtotime(date("Y-$month-1"));
-        $firstWeekStartDay=date("w",$firstDay);
-        echo "第一週的開始第".$firstWeekStartDay."日";
-        $days=date("t",$firstDay);
-        $lastDay=strtotime(date("Y-$month-$days"));
-        echo "<br>";
-        echo "最後一天是".date("Y-m-d",$lastDay);
+    $month = 5;
+    echo "月份:" . $month;
+    echo "<br>";
+    $firstDay = strtotime(date("Y-$month-1"));
+    $firstWeekStartDay = date("w", $firstDay);
+    echo "第一週的開始第" . $firstWeekStartDay . "日";
+    $days = date("t", $firstDay);
+    $lastDay = strtotime(date("Y-$month-$days"));
+    echo "<br>";
+    echo "最後一天是" . date("Y-m-d", $lastDay);
 
-        echo "<table>";
+    echo "<table>";
+    echo "<tr>";
+    echo "<td>日</td>";
+    echo "<td>一</td>";
+    echo "<td>二</td>";
+    echo "<td>三</td>";
+    echo "<td>四</td>";
+    echo "<td>五</td>";
+    echo "<td>六</td>";
+    echo "</tr>";
+
+    for ($i = 0; $i < 6; $i++) {
         echo "<tr>";
-        echo "<td>日</td>";
-        echo "<td>一</td>";
-        echo "<td>二</td>"; 
-        echo "<td>三</td>";
-        echo "<td>四</td>";
-        echo "<td>五</td>";
-        echo "<td>六</td>";
-        echo "</tr>";
+        for ($j = 0; $j < 7; $j++) {
+            if ($i == 0 && $j >= $firstWeekStartDay) {
+                echo "<td>";
+                echo $i * 7 + $j - ($firstWeekStartDay - 1);
+                echo "</td>";
+            } else if ($i > 0) {
 
-        for ($i=0;$i<6;$i++) {
-            echo "<tr>";
-            for ($j=0;$j<7;$j++) {
-                if($i==0 && $j>=$firstWeekStartDay) {
-                    echo "<td>";
-                    echo $i*7+$j-($firstWeekStartDay-1);
-                    echo "</td>";
-
-                }else if($i>0) {
-
-                    echo "<td>";
-                    if($i*7+$j-($firstWeekStartDay-1)<=$days){
-                        echo $i*7+$j-($firstWeekStartDay-1);
-                    }else{
-                        echo "&nbsp";
-                    }
-                    echo "</td>";
-
+                echo "<td>";
+                if ($i * 7 + $j - ($firstWeekStartDay - 1) <= $days) {
+                    echo $i * 7 + $j - ($firstWeekStartDay - 1);
+                } else {
+                    echo "&nbsp";
                 }
-                else{
-                    echo "<td></td>";
-                }
+                echo "</td>";
+            } else {
+                echo "<td></td>";
             }
-            echo "</tr>";
         }
+        echo "</tr>";
+    }
 
-        
 
-        
-        echo "</table>";
+
+
+    echo "</table>";
     ?>
 
 </body>
+
 </html>

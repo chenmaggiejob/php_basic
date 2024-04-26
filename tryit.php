@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tryit</title>
 </head>
-<body>
+
+<>
     <h2><a href="index.html">index</a></h2>
 
     <h3>給定兩個變數，請思考如何交換兩個變數的值</h3>
@@ -24,18 +26,19 @@
     </ol>
     <?php
 
-        $a = 10;   //定義$a變數為10
-        $b = 50;   //定義$b變數為50
-        $temp = $a;   //將$a先指定給$temp暫存起來
-        $a = $b;   //將$b的值指定給$a
-        $b = $temp;   //將$temp的值給$b
-        
-        echo "結果 <br>";
-        echo "$"."a = " . $a . " ; " . "$" . "b = " . $b;
+    $a = 10;   //定義$a變數為10
+    $b = 50;   //定義$b變數為50
+    $temp = $a;   //將$a先指定給$temp暫存起來
+    $a = $b;   //將$b的值指定給$a
+    $b = $temp;   //將$temp的值給$b
+
+    echo "結果 <br>";
+    echo "$" . "a = " . $a . " ; " . "$" . "b = " . $b;
     ?>
     <hr>
-    
 
 
-</body>
+
+    </body>
+
 </html>
