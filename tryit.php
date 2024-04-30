@@ -55,8 +55,8 @@ echo "$" . "a = " . $a . " ; " . "$" . "b = " . $b;
     <?php
     $score = 60; //定義成績為60
     echo "學生成績【" . $score . "】<br>"; //先輸出$score目前的分數
-    $level = ($score >= 60) ? "及格" : "不及格"; //將$score的結果指給$level
-    echo "成績結果【" . $level . "】"  //輸出$level得到的結果
+    $result = ($score >= 60) ? "及格" : "不及格"; //將$score的結果指給$level
+    echo "成績結果【" . $result . "】"  //輸出$level得到的結果
     ?>
     <p>if else思維</p>
     <ol>
@@ -65,6 +65,7 @@ echo "$" . "a = " . $a . " ; " . "$" . "b = " . $b;
         <li>否則則輸出成績結果為不及格</li>
     </ol>
     <br>
+
     <?php
     $score = 59; //先定義成績為59 
     echo "學生成績【" . $score . "】<br>"; //先輸出$score目前的分數
@@ -72,10 +73,94 @@ echo "$" . "a = " . $a . " ; " . "$" . "b = " . $b;
         echo "成績結果【及格】";        //輸出成績結果為及格
     } else {                           //否則
         echo "成績結果【不及格】";      //輸出成結果為不及格
-    };
+    }
     ?>
 
     <hr>
+    <h2>流程結構練習</h2>
+
+    <p>判斷成績及格學生</p>
+    <ul>
+        <li>給定一個成績數字，判斷是否及格(60)分</li>
+    </ul>
+    <br>
+
+    <?php
+    $score = "100";
+    echo "該學生成績為" . $score . "分,";
+    if ($score > 100 || $score < 0) {
+        echo "成績異常，分數需於0～100之間。";
+    } elseif ($score >= 60) {
+        echo "成績【及格】";
+    } else {
+        echo "成績【不及格】";
+    }
+    ?>
+
+    <p>分配成績等級</p>
+    給定一個成績數字，根據成績所在的區間，給定等級
+    <ul>
+        <li>0 ~ 59 => E</li>
+        <li>60 ~ 69 => D</li>
+        <li>70 ~ 79 => C</li>
+        <li>80 ~ 89 => B</li>
+        <li>90 ~ 100 => A</li>
+    </ul>
+    <br>
+
+    <?php
+    $level = $score;
+    if ($score >= 90 && $score <= 100) {
+        $level  = "A";
+    } elseif ($score >= 80 && $score <= 89) {
+        $level = "B";
+    } elseif ($score >= 70 && $score <= 79) {
+        $level = "C";
+    } elseif ($score >= 60 && $score <= 69) {
+        $level = "D";
+    } elseif ($score >= 0 && $score <= 59) {
+        $level = "E";
+    } else {
+        echo "成績異常，分數需於0～100之間，請確認後再重新輸入。";
+        exit;
+    }
+    echo "區間等級為【" . $level . "】";
+    ?>
+
+    <p>依據學生成績等級給予評價</p>
+    <ul>
+        <li>根據學生不同的成績等級在網頁上印出不同的文字評價</li>
+    </ul>
+    <br>
+
+    <?php
+    switch ($level) {
+        case 'A':
+            echo "成績優異";
+            break;
+        case 'B':
+            echo "成績良好";
+            break;
+        case 'C':
+            echo "成績尚可";
+            break;
+        case 'D';
+            echo "成績欠佳";
+            break;
+
+        case "E";
+            echo "請加油學習";
+
+        default:
+            "成績不在評定區間";
+            break;
+    }
+    ?>
+
+
+
+
+
 
 
 
